@@ -1,0 +1,109 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  font-size: 10px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #a3a3a3;
+  margin-left: 20px;
+}
+
+#calculator {
+  border-radius: 5px;
+  border: 1px solid black; 
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding: 0;
+  max-width: 320px;
+  min-width: 320px;
+  flex-direction: column;
+  background-color: #ecebeb;
+}
+#calculator .calculator-logs {
+  height: 80px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  align-items: flex-start;
+  flex-direction: column;
+  
+}
+#calculator .calculator-logs:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48px;
+  content: '';
+  z-index: 5;
+  position: absolute;
+  background: #ffffff00;
+}
+#calculator .calculator-logs span {
+  color: #0a0a03;
+  opacity: .75;
+  display: block;
+  font-size: .8rem;
+  text-align: right;
+  margin-top: .4rem;
+  line-height: 1;
+  font-weight: lighter;
+  
+}
+#calculator .hist{
+  margin-left: 2px;
+}
+
+#calculator .calculator-input {
+  color: #414141;
+  width: 100%;
+  border: none;
+  padding: .8rem;
+  display: block;
+  font-size: 2.4rem;
+  background: none;
+  text-align: right;
+  font-weight: lighter;
+}
+#calculator .calculator-input:focus, #calculator .calculator-input:active {
+  outline: none;
+}
+#calculator .calculator-row {
+  display: flex;
+  padding: 0;
+  justify-content: space-around;
+}
+#calculator .calculator-row .calculator-col {
+  flex: 1;
+  box-shadow: 0 0 0 1px #2f2f31;
+}
+
+#calculator .calculator-btn {
+  width: 100%;
+  color: #e4e4e4;
+  border: none;
+  cursor: pointer;
+  padding: .8rem;
+  outline: none;
+  font-size: 1.6rem;
+  transition: all .3s ease-in-out;
+  font-weight: 200;
+  justify-content: center;
+  background-color: #8b529bc2;
+}
+
+#calculator .calculator-btn.green {
+  background-color: #558680;
+}
+
+#calculator .calculator-btn.lat {
+  background-color: #5271b3;
+  color: #e4e4e4;
+}
